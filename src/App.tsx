@@ -1,9 +1,12 @@
 import React from "react"
+import Home from "./components/Home"
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="font-bold underline text-3xl">Hello MLH</h1>
+    <div className="bg-[#faeee7] text-[#33272a] h-screen">
+      <Navbar />
+      <Home />
     </div>
   )
 }
