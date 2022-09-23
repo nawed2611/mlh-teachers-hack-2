@@ -1,0 +1,46 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model student {
+  id         Int          @id @default(autoincrement())
+  name       String
+  email      String       @unique
+  phone      String       @unique
+  courseId   Int?
+  course     course?      @relation(fields: [courseId], references: [id])
+  attendance attendance[]
+}
+
+model teacher {
+  id     Int      @id @default(autoincrement())
+  name   String
+  email  String   @unique
+  phone  String   @unique
+  course course[]
+}
+
+model course {
+  id         Int          @id @default(autoincrement())
+  name       String
+  teacherId  Int
+  teacher    teacher      @relation(fields: [teacherId], references: [id])
+  students   student[]
+  attendance attendance[]
+}
+
+model attendance {
+  id        Int      @id @default(autoincrement())
+  studentId Int
+  courseId  Int
+  date      DateTime
+  student   student  @relation(fields: [studentId], references: [id])
+  course    course   @relation(fields: [courseId], references: [id])
+}
