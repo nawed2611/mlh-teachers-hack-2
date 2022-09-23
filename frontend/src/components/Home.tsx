@@ -28,7 +28,7 @@ const Home = () => {
         return (
             <div className="flex flex-col border-2 rounded m-2 p-4 w-[50vw] justify-center">
                 <h1 className="text-3xl font-semibold my-2 capitalize">Voila, {role}s 😁!</h1>
-                <form className='flex flex-col items-left justify-center'>
+                <form className='flex flex-col items-start justify-center'>
                     <label className="my-2">
                         Name
                         <input className='focus:outline-none px-2 w-[60%] py-1 ml-2 rounded' type='text' placeholder='Enter your Name' />
