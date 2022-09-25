@@ -1,4 +1,4 @@
-# Present!
+# Present! 🙋🏻‍♀️ 🙋🏼
 
 <h2>Inspiration</h2>
 <p>Every day in a 40-minute class, 10 minutes are spent just taking attendance. Attendance is inaccurate, and maintaining bulky registers is a pain.</p>
