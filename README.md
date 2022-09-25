@@ -8,9 +8,9 @@
 <p>It’s very tiring and time-consuming, especially in a class of 80 students. Through Present!, not only does it take them less time it also ensures accuracy.</p>
 
 <h2>What it does</h2>
-<p>This app helps teachers take attendance easily using a QR code</p>
 
-<h2>How we built it</h2>
-<p>we build it using next JS, tailwind CSS, and Twilio for handling the SMS verification using generated OTP.</p>
-
+<li>Students and Teachers will register on the portal using their names, phone, and email.</li>
+<li>The phone number will be verified using the Twilio service for SMS verification using OTP.</li>
+<li>Once registered, the students will be directed to their profile page where a unique QR code is displayed and other details. Whereas in the case of the teachers they will be directed to a page with just their details.</li>
+<li>This way the teacher can scan the QR code of the students and mark their attendance</li>
 
